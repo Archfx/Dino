@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\152\Desktop\fpga-space-invaders\NERP_demo_top.ncd
-OUTFILE=C:\Users\152\Desktop\fpga-space-invaders\NERP_demo_top.bit
+INFILE=C:\Users\archfx\Documents\ISE_Projects\fpga-space-invaders\NERP_demo_top.ncd
+OUTFILE=C:\Users\archfx\Documents\ISE_Projects\fpga-space-invaders\NERP_demo_top.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\152\Desktop\fpga-space-invaders
-LICENSE=ISE
-USER_INFO=203015155_203016297_210565169_105
+WORKINGDIR=C:\Users\archfx\Documents\ISE_Projects\fpga-space-invaders
+LICENSE=WebPack
+USER_INFO=211749063_0_0_536

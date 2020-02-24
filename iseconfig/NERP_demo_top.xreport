@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-16T15:31:47</DateModified>
+  <DateModified>2020-02-24T13:33:39</DateModified>
   <ModuleName>NERP_demo_top</ModuleName>
   <SummaryTimeStamp>2017-02-28T15:40:18</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/152/Desktop/fpga-space-invaders/iseconfig/NERP_demo_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/152/Desktop/fpga-space-invaders\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/archfx/Documents/ISE_Projects/fpga-space-invaders/iseconfig/NERP_demo_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/archfx/Documents/ISE_Projects/fpga-space-invaders\</ImplementationReportsDirectory>
   <DateInitialized>2017-02-28T14:01:12</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

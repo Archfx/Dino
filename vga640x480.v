@@ -76,6 +76,7 @@ reg alienRight = 1;
 reg[3:0] alienSpeed = 'b0110; // logical right shift to double speed
 
 
+
 ////// DEBOUNCING ////////
 //reg [3:0] btnS_buff;
 //reg game_clk_debounce;
@@ -305,7 +306,7 @@ begin
 			blue = 2'b000;
 		end
 		// Draw player sprite.
-		else if (hc >= (playerPosX) && hc < (playerPosX + 18)
+		/*else if (hc >= (playerPosX) && hc < (playerPosX + 18)
 				&& vc >= (playerPosY - 7) && vc < (playerPosY))
 		begin
 			red = 3'b000;
@@ -314,6 +315,12 @@ begin
 		end
 		else if (hc >= (playerPosX + 7) && hc < (playerPosX + 11)
 				&& vc >= (playerPosY - 10) && vc < (playerPosY - 7))
+		begin
+			red = 3'b000;
+			green = 3'b111;
+			blue = 2'b00;
+		end*/
+		else if ((hc == playerPosX + 6'd4  && vc == playerPosY + 6'd9 ) || (hc == playerPosX + 6'd4  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd4  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd5  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd5  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd5  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd5  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd6  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd6  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd6  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd6  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd15 ) || (hc == playerPosX + 6'd7  && vc == playerPosY + 6'd16 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd15 ) || (hc == playerPosX + 6'd8  && vc == playerPosY + 6'd16 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd9 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd9  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd8 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd9 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd10  && vc == playerPosY + 6'd15 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd8 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd9 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd14 ) || (hc == playerPosX + 6'd11  && vc == playerPosY + 6'd16 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd8 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd9 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd12 ) || (hc == playerPosX + 6'd12  && vc == playerPosY + 6'd13 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd8 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd10 ) || (hc == playerPosX + 6'd13  && vc == playerPosY + 6'd11 ) || (hc == playerPosX + 6'd14  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd14  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd14  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd14  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd14  && vc == playerPosY + 6'd8 ) || (hc == playerPosX + 6'd15  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd15  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd15  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd15  && vc == playerPosY + 6'd7 ) || (hc == playerPosX + 6'd16  && vc == playerPosY + 6'd4 ) || (hc == playerPosX + 6'd16  && vc == playerPosY + 6'd5 ) || (hc == playerPosX + 6'd16  && vc == playerPosY + 6'd6 ) || (hc == playerPosX + 6'd16  && vc == playerPosY + 6'd7 ))
 		begin
 			red = 3'b000;
 			green = 3'b111;
@@ -426,9 +433,9 @@ begin
 	// we're outside active vertical range so display black
 	else
 	begin
-		red = 0;
-		green = 0;
-		blue = 0;
+		red = 3'b000;
+		green = 3'b000;
+		blue = 2'b00;
 	end
 	
 end
